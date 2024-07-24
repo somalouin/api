@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "app.ts",
   "scripts": {
-    "start": "node dist/index.js",
-    "dev": "nodemon src/index.ts",
+    "dev": "nodemon src/app.ts",
     "build": "tsc"
   },
   "keywords": [],
