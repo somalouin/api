@@ -1,19 +1,17 @@
 import express from 'express';
-import { stat } from 'fs';
+const router = express.Router();
 
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => {
+app.use(router);
+
+router.get('/', (req, res) => {
   res.send('hello world');
 });
 
-app.get('/health', (req, res) => {
-  try {
-    res.send('I am healty');
-  } catch (error) {
-    res.status(500).send('I am not healty');
-  }
+router.get('/health', (req, res) => {
+  res.send('OK');
 });
 
 app.listen(port, () => {
