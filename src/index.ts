@@ -1,9 +1,8 @@
 import express from 'express';
-const router = express.Router();
 
+const router = express.Router();
 const app = express();
 const port = 3000;
-
 app.use(router);
 
 router.get('/', (req, res) => {
