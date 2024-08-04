@@ -9,6 +9,10 @@ router.get('/', (req, res) => {
   res.send('hello world');
 });
 
+router.get('/now', (req, res) => {
+  res.send({time: new Date()});
+});
+
 router.get('/health', (req, res) => {
   res.send('OK');
 });
