@@ -1,4 +1,5 @@
 import express from 'express';
+import { automate } from './handlers/automate';
 
 const router = express.Router();
 const app = express();
@@ -8,6 +9,8 @@ app.use(router);
 router.get('/', (req, res) => {
   res.send('hello world');
 });
+
+router.post('/automate', automate)
 
 router.get('/now', (req, res) => {
   res.send({time: new Date()});
